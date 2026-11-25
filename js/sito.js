@@ -5,6 +5,11 @@
 (function () {
   'use strict';
 
+  // ---------- Impostazioni ----------
+  // Selezioni e festival: per ora nascosti (decisione del 25/11/2026). Metti true per mostrarli
+  // di nuovo sotto le schede dei progetti, nel filtro "Con selezioni" e nel profilo.
+  var MOSTRA_SELEZIONI = false;
+
   // ---------- Testi dell'interfaccia ----------
   var T = {
     it: {
@@ -163,7 +168,7 @@
       '<div style="display:flex;flex-direction:column;gap:6px">' +
       '<h3>' + esc(titolo(p)) + '</h3>' +
       '<p>' + esc(p.regia) + ' · ' + esc(p.anno) + ' · ' + esc(p.durata) + '</p>' +
-      '<p class="riconoscimenti">' + esc(riconoscimenti(p)) + '</p>' +
+      (MOSTRA_SELEZIONI ? '<p class="riconoscimenti">' + esc(riconoscimenti(p)) + '</p>' : '') +
       '</div></a>';
   }
 
@@ -184,7 +189,7 @@
     var anni = [];
     progetti.forEach(function (p) { if (anni.indexOf(p.anno) === -1) anni.push(p.anno); });
     anni.sort(function (a, b) { return b - a; });
-    var filtri = [['tutti', t('filtro_tutti')]].concat(anni.map(function (a) { return [String(a), String(a)]; }), [['selezioni', t('filtro_selezioni')]]);
+    var filtri = [['tutti', t('filtro_tutti')]].concat(anni.map(function (a) { return [String(a), String(a)]; }), MOSTRA_SELEZIONI ? [['selezioni', t('filtro_selezioni')]] : []);
     document.getElementById('filtri').innerHTML = filtri.map(function (f) {
       return '<button type="button" data-filtro="' + f[0] + '" aria-pressed="' + (filtro === f[0]) + '">' + esc(f[1]) + '</button>';
     }).join('');
@@ -211,36 +216,26 @@
     if (descr) descr.setAttribute('content', campo(p.sinossi_breve));
 
     var lungo = titolo(p).length > 16 ? ' lungo' : '';
-    var h = '';
-    h += '<div class="contenitore"><a class="indietro" href="progetti.html">' + esc(t('indietro')) + '</a></div>';
-    h += '<section class="contenitore profilo-apertura">' + htmlLocandina(p, 'locandina-grande') +
-      '<div class="testi">' +
-      '<p class="occhiello">' + esc(t('cortometraggio') + ' · ' + campo(p.genere) + ' · ' + p.anno) + '</p>' +
-      '<h1 class="profilo-titolo' + lungo + '">' + esc(titolo(p)) + '</h1>' +
-      '<p style="margin:0;font-size:22px;color:#D4D4D4">' + esc(t('di') + ' ' + p.regia) + '</p>' +
-      '<p style="margin:0;max-width:620px;font-size:20px;line-height:1.5;color:#E5E5E5">' + esc(campo(p.sinossi_breve)) + '</p>' +
-      '<div class="dati"><span>' + esc(p.durata) + '</span><span>' + esc(tr(p.paese)) + '</span><span>' + esc(campo(p.lingua)) + '</span><span>' + esc(tr(p.formato)) + '</span></div>' +
-      '<div class="pulsanti" style="padding-top:8px">' +
-      (p.trailer ? '<a class="pulsante" href="#trailer">' + esc(t('guarda_trailer')) + '</a>' : '') +
-      (p.presskit ? '<a class="pulsante vuoto" href="' + esc(p.presskit) + '" target="_blank" rel="noopener">' + esc(t('scarica_presskit')) + '</a>' : '') +
-      '</div></div></section>';
-
-    var sinossi = campo(p.sinossi), note = campo(p.note);
-    if (sinossi || note) {
-      h += '<section class="sezione"><div class="contenitore due-colonne in-alto">';
-      if (sinossi) h += '<div class="colonna"><h2 class="titolo-m">' + esc(t('sinossi')) + '</h2><p>' + esc(sinossi) + '</p></div>';
-      if (note) h += '<div class="colonna"><h2 class="titolo-m">' + esc(t('note')) + '</h2><p>' + esc(note) + '</p></div>';
-      h += '</div></section>';
-    }
-
-    if ((p.festival || []).length) {
-      h += '<section class="sezione"><div class="contenitore"><h2 class="titolo-m">' + esc(t('festival')) + '</h2><div class="elenco-festival">' +
-        p.festival.map(function (f) { return '<div><span>' + esc(f.nome) + '</span><span>' + esc(campo(f)) + '</span></div>'; }).join('') +
-        '</div></div></section>';
-    }
-
+    var sinossi = campo(p.sinossi) || campo(p.sinossi_breve);
+    var bio = campo(p.bio);
     var idVideo = p.trailer ? encodeURIComponent(p.trailer) : '';
-    h += '<section class="sezione" id="trailer"><div class="contenitore"><h2 class="titolo-m">' + esc(t('trailer')) + '</h2>';
+    var h = '<div class="contenitore profilo">';
+
+    h += '<a class="indietro" href="progetti.html">' + esc(t('indietro')) + '</a>';
+
+    // 1. Locandina a sinistra, titolo e sinossi a destra
+    h += '<section class="p-apertura">' + htmlLocandina(p, 'locandina-grande') +
+      '<div class="p-testi">' +
+      '<p class="occhiello">' + esc(t('cortometraggio') + ' · ' + campo(p.genere) + ' · ' + p.anno + ' · ' + p.durata) + '</p>' +
+      '<h1 class="profilo-titolo' + lungo + '">' + esc(titolo(p)) + '</h1>' +
+      '<p class="p-regia">' + esc(t('di') + ' ' + p.regia) + '</p>' +
+      '<p class="p-sinossi">' + esc(sinossi) + '</p>' +
+      (p.presskit ? '<div><a class="pulsante vuoto piccolo" href="' + esc(p.presskit) + '" target="_blank" rel="noopener">' + esc(t('scarica_presskit')) + '</a></div>' : '') +
+      '</div></section>';
+
+    // 2. Trailer da una parte, regista dall'altra
+    h += '<section class="p-centro">';
+    h += '<div class="p-trailer" id="trailer"><p class="occhiello">' + esc(t('trailer')) + '</p>';
     if (idVideo) {
       h += '<div class="video" id="video"><button type="button" aria-label="' + esc(t('riproduci') + ' ' + titolo(p)) + '">' +
         '<img src="https://i.ytimg.com/vi/' + idVideo + '/hqdefault.jpg" alt="" loading="lazy">' +
@@ -249,29 +244,35 @@
     } else {
       h += '<div class="video in-arrivo"><img src="img/occhio.png" alt=""><span>' + esc(t('trailer_arrivo')) + '</span></div>';
     }
-    h += '</div></section>';
+    h += '</div>';
+    h += '<div class="p-regista"><p class="occhiello">' + esc(t('regista')) + '</p>' +
+      '<div class="p-regista-testa">' +
+      (p.foto_regista ? '<img class="foto-regista" src="' + esc(p.foto_regista) + '" alt="' + esc(p.regia) + '" loading="lazy">' : '') +
+      '<h2>' + esc(p.regia) + '</h2></div>' +
+      (bio ? '<p>' + esc(bio) + '</p>' : '') + '</div>';
+    h += '</section>';
 
+    // (facoltativo) selezioni
+    if (MOSTRA_SELEZIONI && (p.festival || []).length) {
+      h += '<section class="p-dettagli"><div class="p-blocco" style="grid-column:1/-1"><p class="occhiello">' + esc(t('festival')) + '</p><div class="elenco-festival">' +
+        p.festival.map(function (f) { return '<div><span>' + esc(f.nome) + '</span><span>' + esc(campo(f)) + '</span></div>'; }).join('') +
+        '</div></div></section>';
+    }
+
+    // 3. Sotto: scheda tecnica e cast & crew
     var crew = p.crew || [];
     var tecnica = [
       [t('t_titolo_int'), p.titolo_en], [t('t_produzione'), p.produzione], [t('t_paese'), tr(p.paese)],
       [t('t_anno'), p.anno], [t('t_durata'), p.durata], [t('t_formato'), tr(p.formato)], [t('t_lingua'), campo(p.lingua)]
     ].filter(function (r) { return r[1]; });
-    var bio = campo(p.bio);
-    h += '<section class="sezione"><div class="contenitore due-colonne in-alto">';
-    if (crew.length) {
-      h += '<div class="colonna"><h2 class="titolo-m">' + esc(t('crew')) + '</h2><dl class="scheda-tecnica">' +
-        crew.map(function (r) { return '<dt>' + esc(lingua === 'en' ? r[1] : r[0]) + '</dt><dd>' + esc(r[2]) + '</dd>'; }).join('') + '</dl></div>';
-    }
-    h += '<div class="colonna"><h2 class="titolo-m">' + esc(t('tecnica')) + '</h2><dl class="scheda-tecnica">' +
-      tecnica.map(function (r) { return '<dt>' + esc(r[0]) + '</dt><dd>' + esc(r[1]) + '</dd>'; }).join('') + '</dl>' +
-      '</div></div></section>';
-    if (bio || p.foto_regista) {
-      h += '<section class="sezione"><div class="contenitore regista">' +
-        (p.foto_regista ? '<img class="foto-regista" src="' + esc(p.foto_regista) + '" alt="' + esc(p.regia) + '" loading="lazy">' : '') +
-        '<div class="colonna"><p class="occhiello">' + esc(t('regista')) + '</p><h2 class="titolo-l">' + esc(p.regia) + '</h2>' +
-        (bio ? '<p>' + esc(bio) + '</p>' : '') + '</div></div></section>';
-    }
+    h += '<section class="p-dettagli">' +
+      '<div class="p-blocco"><p class="occhiello">' + esc(t('tecnica')) + '</p><dl class="scheda-tecnica">' +
+      tecnica.map(function (r) { return '<dt>' + esc(r[0]) + '</dt><dd>' + esc(r[1]) + '</dd>'; }).join('') + '</dl></div>' +
+      (crew.length ? '<div class="p-blocco"><p class="occhiello">' + esc(t('crew')) + '</p><dl class="scheda-tecnica">' +
+        crew.map(function (r) { return '<dt>' + esc(lingua === 'en' ? r[1] : r[0]) + '</dt><dd>' + esc(r[2]) + '</dd>'; }).join('') + '</dl></div>' : '') +
+      '</section>';
 
+    h += '</div>';
     box.innerHTML = h;
 
     var video = document.getElementById('video');

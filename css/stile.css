@@ -127,6 +127,24 @@ dl.scheda-tecnica dd { margin: 0; }
 .foto-regista { flex: 0 1 380px; width: 100%; max-width: 380px; aspect-ratio: 4 / 5; object-fit: cover; filter: grayscale(100%); background: var(--riquadro); }
 .regista .colonna { flex: 999 1 420px; min-width: 0; max-width: 720px; }
 
+/* Profilo: pagina unica in tre fasce */
+.profilo { padding-bottom: 96px; }
+.profilo .indietro { margin-bottom: 32px; }
+.p-apertura { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 64px; align-items: end; padding-bottom: 72px; border-bottom: 1px solid var(--bordo); }
+.p-apertura .locandina-grande, .p-apertura .senza-locandina { width: 100%; max-width: none; }
+.p-testi { display: flex; flex-direction: column; gap: 22px; padding-bottom: 8px; }
+.p-regia { margin: 0; font-size: 22px; color: #D4D4D4; }
+.p-sinossi { margin: 8px 0 0; max-width: 640px; font-size: 19px; line-height: 1.6; color: #E5E5E5; }
+.p-centro { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 64px; padding: 72px 0; border-bottom: 1px solid var(--bordo); align-items: start; }
+.p-trailer .video, .p-regista .p-regista-testa { margin-top: 20px; }
+.p-regista { display: flex; flex-direction: column; }
+.p-regista-testa { display: flex; align-items: flex-end; gap: 22px; }
+.p-regista .foto-regista { flex: 0 0 150px; width: 150px; max-width: 150px; }
+.p-regista h2 { margin: 0; font-size: clamp(30px, 3vw, 44px); line-height: .98; font-weight: 500; letter-spacing: -.045em; }
+.p-regista p:not(.occhiello) { margin: 22px 0 0; font-size: 16px; line-height: 1.65; color: var(--grigio-testo); }
+.p-dettagli { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; padding-top: 56px; }
+.p-blocco .scheda-tecnica { margin-top: 20px; font-size: 15px; }
+
 /* Piede */
 .piede { border-top: 1px solid var(--bordo); }
 .piede .contenitore { padding-top: 56px; padding-bottom: 40px; display: flex; flex-direction: column; gap: 48px; }
@@ -149,4 +167,9 @@ dl.scheda-tecnica dd { margin: 0; }
   .griglia { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 14px; }
   .scheda h3 { font-size: 19px; }
   .senza-locandina span { font-size: 20px; }
+  .p-apertura, .p-centro, .p-dettagli { grid-template-columns: 1fr; gap: 40px; }
+  .p-apertura { padding-bottom: 48px; }
+  .p-apertura .locandina-grande, .p-apertura .senza-locandina { max-width: 420px; }
+  .p-centro { padding: 48px 0; }
+  .p-regista .foto-regista { flex-basis: 110px; width: 110px; }
 }
