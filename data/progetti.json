@@ -1,5 +1,5 @@
 {
-  "_istruzioni": "Un blocco { ... } per ogni progetto, nell'ordine in cui compaiono sul sito. Per aggiungere il trailer: scrivi in \"trailer\" solo il codice del video YouTube (es. per https://www.youtube.com/watch?v=AbC123xyz scrivi \"AbC123xyz\"). \"inHome\": true = il progetto compare anche nella Home (massimo 4). \"locandina\": percorso dell'immagine dentro la cartella img/locandine; vuoto = riquadro con il titolo. \"presskit\": link pubblico al PDF del press kit (es. link di condivisione Drive); vuoto = pulsante nascosto.",
+  "_istruzioni": "Un blocco { ... } per ogni progetto, nell'ordine in cui compaiono sul sito. Per aggiungere il trailer: scrivi in \"trailer\" solo il codice del video YouTube (es. per https://www.youtube.com/watch?v=AbC123xyz scrivi \"AbC123xyz\"). \"inHome\": true = il progetto compare anche nella Home (massimo 4). \"locandina\": percorso dell'immagine dentro la cartella img/locandine; vuoto = riquadro con il titolo. \"presskit\": link pubblico al PDF del press kit (es. link di condivisione Drive); vuoto = pulsante nascosto. \"foto_regista\": foto del regista dentro img/registi (vuoto = solo testo).",
   "progetti": [
     {
       "id": "hemo",
@@ -107,7 +107,8 @@
           "it": "Selezione ufficiale",
           "en": "Official selection"
         }
-      ]
+      ],
+      "foto_regista": "img/registi/hemo.jpg"
     },
     {
       "id": "sombrerete",
@@ -170,7 +171,8 @@
           "it": "Fuori concorso",
           "en": "Out of competition"
         }
-      ]
+      ],
+      "foto_regista": "img/registi/sombrerete.jpg"
     },
     {
       "id": "raffaele-felice",
@@ -273,7 +275,8 @@
           "it": "Selezione ufficiale",
           "en": "Official selection"
         }
-      ]
+      ],
+      "foto_regista": "img/registi/raffaele-felice.jpg"
     },
     {
       "id": "ultima-notte-d-estate",
@@ -361,7 +364,8 @@
           "it": "Quarti di finale",
           "en": "Quarter-finalist"
         }
-      ]
+      ],
+      "foto_regista": "img/registi/ultima-notte-d-estate.jpg"
     },
     {
       "id": "roxy-kama",
@@ -381,7 +385,7 @@
       },
       "formato": "Colore · 2.35:1",
       "produzione": "Wide (Antonio Porcaro, Armando Taddeo)",
-      "locandina": "",
+      "locandina": "img/locandine/roxy-kama.jpg",
       "trailer": "",
       "presskit": "",
       "inHome": false,
@@ -408,6 +412,11 @@
           "Antonio Porcaro"
         ],
         [
+          "Con",
+          "With",
+          "Zoe Ranno, Luigi Iacuzio, Ernesto Lama, Arturo Muselli"
+        ],
+        [
           "Produzione",
           "Producers",
           "Antonio Porcaro, Armando Taddeo"
@@ -419,7 +428,8 @@
           "it": "Finalista",
           "en": "Finalist"
         }
-      ]
+      ],
+      "foto_regista": "img/registi/roxy-kama.jpg"
     },
     {
       "id": "tommaso",
@@ -496,7 +506,8 @@
           "InFabula Produzioni · co-prodotto da Alessandro Prece"
         ]
       ],
-      "festival": []
+      "festival": [],
+      "foto_regista": "img/registi/tommaso.jpg"
     },
     {
       "id": "belladonna",
@@ -516,7 +527,7 @@
       },
       "formato": "Colore · 2.00:1",
       "produzione": "Veronica Lucchetta",
-      "locandina": "",
+      "locandina": "img/locandine/belladonna.jpg",
       "trailer": "",
       "presskit": "",
       "inHome": false,
@@ -568,7 +579,8 @@
           "Ettore Brancé"
         ]
       ],
-      "festival": []
+      "festival": [],
+      "foto_regista": "img/registi/belladonna.jpg"
     },
     {
       "id": "prima-di-scendere",
@@ -588,7 +600,7 @@
       },
       "formato": "Colore · 1.66:1",
       "produzione": "Reflux Media",
-      "locandina": "",
+      "locandina": "img/locandine/prima-di-scendere.jpg",
       "trailer": "",
       "presskit": "",
       "inHome": false,
@@ -630,7 +642,8 @@
           "Reflux Media"
         ]
       ],
-      "festival": []
+      "festival": [],
+      "foto_regista": "img/registi/prima-di-scendere.jpg"
     },
     {
       "id": "limoni",
@@ -697,7 +710,8 @@
           "Miriam Kdaiem, Beatrice Rodegari, Francesca Savoretti"
         ]
       ],
-      "festival": []
+      "festival": [],
+      "foto_regista": "img/registi/limoni.jpg"
     }
   ]
 }

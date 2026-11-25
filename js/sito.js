@@ -38,6 +38,7 @@
       t_durata: 'Durata', t_formato: 'Formato', t_lingua: 'Lingua',
       video_nota: 'YouTube · si carica al clic', non_trovato: 'Progetto non trovato.',
       riproduci: 'Riproduci il trailer di', locandina_di: 'Locandina di',
+      trailer_arrivo: 'Trailer in arrivo',
       piede_cookie: 'Questo sito non usa cookie di profilazione. I trailer YouTube si caricano solo se premi play.'
     },
     en: {
@@ -71,6 +72,7 @@
       t_durata: 'Running time', t_formato: 'Format', t_lingua: 'Language',
       video_nota: 'YouTube · loads on click', non_trovato: 'Film not found.',
       riproduci: 'Play the trailer of', locandina_di: 'Poster of',
+      trailer_arrivo: 'Trailer coming soon',
       piede_cookie: 'This site uses no profiling cookies. YouTube trailers load only when you press play.'
     }
   };
@@ -237,14 +239,17 @@
         '</div></div></section>';
     }
 
-    if (p.trailer) {
-      var idVideo = encodeURIComponent(p.trailer);
-      h += '<section class="sezione" id="trailer"><div class="contenitore"><h2 class="titolo-m">' + esc(t('trailer')) + '</h2>' +
-        '<div class="video" id="video"><button type="button" aria-label="' + esc(t('riproduci') + ' ' + titolo(p)) + '">' +
+    var idVideo = p.trailer ? encodeURIComponent(p.trailer) : '';
+    h += '<section class="sezione" id="trailer"><div class="contenitore"><h2 class="titolo-m">' + esc(t('trailer')) + '</h2>';
+    if (idVideo) {
+      h += '<div class="video" id="video"><button type="button" aria-label="' + esc(t('riproduci') + ' ' + titolo(p)) + '">' +
         '<img src="https://i.ytimg.com/vi/' + idVideo + '/hqdefault.jpg" alt="" loading="lazy">' +
         '<span class="play"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 16 16"><path d="M4 2.5v11l9-5.5z" fill="#0A0A0A"/></svg></span>' +
-        '</button><span class="nota">' + esc(t('video_nota')) + '</span></div></div></section>';
+        '</button><span class="nota">' + esc(t('video_nota')) + '</span></div>';
+    } else {
+      h += '<div class="video in-arrivo"><img src="img/occhio.png" alt=""><span>' + esc(t('trailer_arrivo')) + '</span></div>';
     }
+    h += '</div></section>';
 
     var crew = p.crew || [];
     var tecnica = [
@@ -259,8 +264,13 @@
     }
     h += '<div class="colonna"><h2 class="titolo-m">' + esc(t('tecnica')) + '</h2><dl class="scheda-tecnica">' +
       tecnica.map(function (r) { return '<dt>' + esc(r[0]) + '</dt><dd>' + esc(r[1]) + '</dd>'; }).join('') + '</dl>' +
-      (bio ? '<h3 style="margin:16px 0 0;font-size:20px;font-weight:500">' + esc(t('regista')) + '</h3><p>' + esc(bio) + '</p>' : '') +
       '</div></div></section>';
+    if (bio || p.foto_regista) {
+      h += '<section class="sezione"><div class="contenitore regista">' +
+        (p.foto_regista ? '<img class="foto-regista" src="' + esc(p.foto_regista) + '" alt="' + esc(p.regia) + '" loading="lazy">' : '') +
+        '<div class="colonna"><p class="occhiello">' + esc(t('regista')) + '</p><h2 class="titolo-l">' + esc(p.regia) + '</h2>' +
+        (bio ? '<p>' + esc(bio) + '</p>' : '') + '</div></div></section>';
+    }
 
     box.innerHTML = h;
 

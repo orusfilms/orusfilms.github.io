@@ -8,6 +8,7 @@ Pagine
 
 Cartelle
 - data/progetti.json . TUTTI i dati dei progetti (titoli, sinossi, crew, festival, trailer). Si modifica solo questo per aggiornare il sito.
+- img/registi ........ Foto dei registi (nome = id del progetto)
 - img/locandine ...... Locandine (jpg larghe circa 640 px, nome = id del progetto)
 - img ................ Loghi, icona, immagine di anteprima per i social
 - css/stile.css ...... Grafica (colori e font in cima, nel blocco :root)
