@@ -26,8 +26,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--bianco); outlin
 .testata { border-bottom: 1px solid var(--bordo); position: sticky; top: 0; background: rgba(10,10,10,.94); backdrop-filter: blur(8px); z-index: 10; }
 .testata .contenitore { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 18px; padding-bottom: 18px; }
 .marchio { display: flex; align-items: center; gap: 14px; }
-.marchio img.occhio { height: 34px; width: auto; }
-.marchio img.scritta { height: 30px; width: auto; }
+.marchio .logo-testata { height: 40px; width: auto; }
 .menu { display: flex; align-items: center; gap: 28px; font-size: 15px; font-weight: 500; }
 .menu a.attivo { border-bottom: 1px solid var(--bianco); padding-bottom: 2px; }
 .lingua { background: none; border: 0; color: var(--grigio-scuro); font: inherit; cursor: pointer; padding: 10px 4px; min-height: 44px; }
@@ -149,7 +148,7 @@ dl.scheda-tecnica dd { margin: 0; }
 .piede { border-top: 1px solid var(--bordo); }
 .piede .contenitore { padding-top: 56px; padding-bottom: 40px; display: flex; flex-direction: column; gap: 48px; }
 .piede .righe { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; }
-.piede .logo-piede { height: 64px; width: auto; }
+.piede .logo-piede { height: 56px; width: auto; }
 .piede .colonne { display: flex; flex-wrap: wrap; gap: 56px; font-size: 15px; line-height: 1.8; }
 .piede .colonne div { display: flex; flex-direction: column; }
 .piede .colonne span.etichetta { color: var(--grigio-scuro); }
@@ -159,6 +158,7 @@ dl.scheda-tecnica dd { margin: 0; }
 @media (max-width: 900px) {
   .contenitore { padding-left: 20px; padding-right: 20px; }
   .apri-menu { display: inline-block; }
+  .marchio .logo-testata { height: 34px; }
   .menu { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--nero); border-bottom: 1px solid var(--bordo); flex-direction: column; align-items: flex-start; gap: 4px; padding: 12px 20px 24px; font-size: 18px; }
   .menu.aperto { display: flex; }
   .menu a { padding: 10px 0; }
