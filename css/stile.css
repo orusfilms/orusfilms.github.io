@@ -20,7 +20,7 @@ a { color: var(--bianco); text-decoration: none; }
 a:hover { color: #BDBDBD; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--bianco); outline-offset: 3px; }
 .contenitore { max-width: var(--larghezza); margin: 0 auto; padding-left: 40px; padding-right: 40px; }
-.nascosto { display: none !important; }
+.nascosto, [hidden] { display: none !important; }
 
 /* Testata */
 .testata { border-bottom: 1px solid var(--bordo); position: sticky; top: 0; background: rgba(10,10,10,.94); backdrop-filter: blur(8px); z-index: 10; }
@@ -144,6 +144,27 @@ dl.scheda-tecnica dd { margin: 0; }
 .p-dettagli { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; padding-top: 56px; }
 .p-blocco .scheda-tecnica { margin-top: 20px; font-size: 15px; }
 
+/* Pagina Proponi il tuo corto */
+.proponi { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 72px; padding: 72px 0 104px; align-items: start; }
+.proponi-intro { position: sticky; top: 120px; }
+.proponi-intro .titolo-xl { font-size: clamp(40px, 5vw, 76px); }
+.proponi-nota { font-size: 14px !important; color: var(--grigio-scuro) !important; }
+.modulo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px; }
+.modulo .largo, .modulo .campo.largo { grid-column: 1 / -1; }
+.campo { display: flex; flex-direction: column; gap: 8px; }
+.campo label { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--grigio-chiaro); }
+.campo input, .campo textarea { background: transparent; border: 0; border-bottom: 1px solid #404040; color: var(--bianco); font: inherit; font-size: 18px; padding: 10px 0; border-radius: 0; min-height: 44px; }
+.campo textarea { border: 1px solid #404040; padding: 12px; resize: vertical; }
+.campo input:focus, .campo textarea:focus { outline: none; border-color: var(--bianco); }
+.campo input[aria-invalid="true"], .campo textarea[aria-invalid="true"] { border-color: #E5484D; }
+.campo input::placeholder { color: #5C5C5C; }
+.consenso { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; color: var(--grigio-testo); cursor: pointer; }
+.consenso input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: #FFFFFF; flex: none; }
+.errore { margin: 0; color: #FF8A8E; font-size: 15px; }
+.trappola { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.grazie { display: flex; flex-direction: column; gap: 24px; outline: none; }
+.modulo button[disabled] { opacity: .6; cursor: wait; }
+
 /* Piede */
 .piede { border-top: 1px solid var(--bordo); }
 .piede .contenitore { padding-top: 56px; padding-bottom: 40px; display: flex; flex-direction: column; gap: 48px; }
@@ -167,7 +188,10 @@ dl.scheda-tecnica dd { margin: 0; }
   .griglia { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 14px; }
   .scheda h3 { font-size: 19px; }
   .senza-locandina span { font-size: 20px; }
-  .p-apertura, .p-centro, .p-dettagli { grid-template-columns: 1fr; gap: 40px; }
+  .p-apertura, .p-centro, .p-dettagli, .proponi { grid-template-columns: 1fr; gap: 40px; }
+  .proponi { padding-top: 48px; }
+  .proponi-intro { position: static; }
+  .modulo { grid-template-columns: 1fr; }
   .p-apertura { padding-bottom: 48px; }
   .p-apertura .locandina-grande, .p-apertura .senza-locandina { max-width: 420px; }
   .p-centro { padding: 48px 0; }

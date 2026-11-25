@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proponi il tuo corto | Orus Distribution</title>
+<meta name="description" content="Proponi il tuo cortometraggio a Orus Distribution per la distribuzione nei festival.">
+<meta property="og:title" content="Progetti in distribuzione | Orus Distribution">
+<meta property="og:description" content="Proponi il tuo cortometraggio a Orus Distribution per la distribuzione nei festival.">
+<meta property="og:image" content="img/anteprima-social.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" href="img/icona.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/stile.css?v=5">
+<script src="js/sito.js?v=5" defer></script>
+</head>
+<body>
+<header class="testata">
+  <div class="contenitore">
+    <a class="marchio" href="index.html" aria-label="Orus Distribution, home">
+      <img class="logo-testata" src="img/logo-completo.png" alt="Orus Distribution" width="134" height="36" style="height:36px;width:auto">
+    </a>
+    <button class="apri-menu" type="button" aria-expanded="false" aria-controls="menu" data-t="menu">Menu</button>
+    <nav class="menu" id="menu" aria-label="Menu principale">
+      <a href="progetti.html" data-t="menu_progetti">Progetti in distribuzione</a>
+      <a href="index.html#servizi" data-t="menu_servizi">Servizi</a>
+      <a href="index.html#orus-films" data-t="menu_films">Orus Films</a>
+      <a href="index.html#chi-siamo" data-t="menu_chi">Chi siamo</a>
+      <a href="#contatti" data-t="menu_contatti">Contatti</a>
+      <button class="lingua" type="button"><b>IT</b> / EN</button>
+      <a class="pulsante piccolo" href="proponi.html" data-t="menu_invia">Invia il tuo corto</a>
+    </nav>
+  </div>
+</header>
+
+<main class="contenitore">
+  <section class="proponi">
+    <div class="colonna proponi-intro">
+      <p class="occhiello">Orus Distribution</p>
+      <h1 class="titolo-xl" data-t="invia_titolo">Hai un cortometraggio? Raccontacelo.</h1>
+      <p class="testo-grande" data-t="proponi_testo"></p>
+      <p class="proponi-nota" data-t="proponi_nota"></p>
+    </div>
+
+    <form id="modulo-proposta" class="modulo" novalidate>
+      <div class="campo"><label for="f-email"><span data-t="f_email">Email</span> *</label><input id="f-email" name="emailAddress" type="email" autocomplete="email" required></div>
+      <div class="campo"><label for="f-nome"><span data-t="f_nome">Nome e cognome</span> *</label><input id="f-nome" name="entry.2005620554" type="text" autocomplete="name" required></div>
+      <div class="campo"><label for="f-tel"><span data-t="f_tel">Numero di telefono</span> *</label><input id="f-tel" name="entry.1166974658" type="tel" autocomplete="tel" required></div>
+      <div class="campo"><label for="f-indirizzo" data-t="f_indirizzo">Indirizzo</label><input id="f-indirizzo" name="entry.1065046570" type="text" autocomplete="street-address"></div>
+      <div class="campo largo"><label for="f-progetto"><span data-t="f_progetto">Nome del progetto</span> *</label><input id="f-progetto" name="entry.1363552782" type="text" required></div>
+      <div class="campo"><label for="f-link"><span data-t="f_link">Link al video</span> *</label><input id="f-link" name="entry.1433515500" type="url" placeholder="https://vimeo.com/…" required></div>
+      <div class="campo"><label for="f-password" data-t="f_password">Password (eventuale)</label><input id="f-password" name="entry.1063082848" type="text" autocomplete="off"></div>
+      <div class="campo largo"><label for="f-commenti" data-t="f_commenti">Commenti</label><textarea id="f-commenti" name="entry.839337160" rows="5"></textarea></div>
+      <div class="trappola" aria-hidden="true"><label for="f-sito">Sito</label><input id="f-sito" name="sito" type="text" tabindex="-1" autocomplete="off"></div>
+      <label class="consenso largo"><input type="checkbox" id="f-consenso" required> <span data-t="f_consenso">Acconsento all’uso dei miei dati per essere ricontattato da Orus Distribution riguardo a questa proposta.</span></label>
+      <p class="errore largo" id="modulo-errore" role="alert" hidden></p>
+      <div class="largo"><button type="submit" class="pulsante" id="modulo-invia" data-t="f_invia">Invia la proposta</button></div>
+    </form>
+
+    <div class="grazie" id="modulo-grazie" hidden tabindex="-1">
+      <h2 class="titolo-l" data-t="grazie_titolo">Grazie, abbiamo ricevuto la tua proposta.</h2>
+      <p class="testo-grande" data-t="grazie_testo"></p>
+      <div><a class="pulsante vuoto" href="progetti.html" data-t="menu_progetti">Progetti in distribuzione</a></div>
+    </div>
+  </section>
+</main>
+<footer class="piede" id="contatti">
+  <div class="contenitore">
+    <div class="righe">
+      <img class="logo-piede" src="img/logo-completo.png" alt="Orus Distribution" width="186" height="50" style="height:50px;width:auto">
+      <div class="colonne">
+        <div>
+          <span class="etichetta" data-t="piede_scrivici">Scrivici</span>
+          <a href="mailto:orus.distribution@gmail.com">orus.distribution@gmail.com</a>
+          <a href="tel:+393271277830">+39 327 127 7830</a>
+          <a href="tel:+393497036570">+39 349 703 6570</a>
+        </div>
+        <div>
+          <span class="etichetta" data-t="piede_seguici">Seguici</span>
+          <a href="https://www.instagram.com/orus.films/" target="_blank" rel="noopener">Instagram @orus.films</a>
+          <a href="https://www.youtube.com/@orusfilmaking8662" target="_blank" rel="noopener">YouTube</a>
+        </div>
+        <div>
+          <span class="etichetta" data-t="piede_sito">Sito</span>
+          <a href="progetti.html" data-t="menu_progetti">Progetti in distribuzione</a>
+          <a href="proponi.html" data-t="menu_invia">Invia il tuo corto</a>
+        </div>
+      </div>
+    </div>
+    <div class="fondo">
+      <span>© <span id="anno">2026</span> Orus Films &amp; Distribution</span>
+      <span data-t="piede_cookie">Questo sito non usa cookie di profilazione. I trailer YouTube si caricano solo se premi play.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

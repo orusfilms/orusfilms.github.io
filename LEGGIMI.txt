@@ -28,3 +28,10 @@ Se dopo una modifica i progetti spariscono dal sito, quasi sempre è una virgola
 
 Il sito va visto online (o con un piccolo server): aprendo index.html con un doppio clic dal computer
 i progetti non si caricano, perché il browser blocca la lettura di data/progetti.json dai file locali.
+
+Pagina "Proponi il tuo corto" (proponi.html)
+- È il modulo del sito, con la grafica del sito. Le risposte finiscono nel modulo Google "Proponi il tuo cortometraggio":
+  stesso foglio risposte, stessa notifica email, stessa sezione Proposte della piattaforma.
+- Ogni campo di proponi.html ha un nome "entry.NUMERO" che corrisponde a una domanda del modulo Google.
+  Se nel modulo Google si aggiunge, toglie o rende obbligatoria una domanda, va aggiornato anche proponi.html
+  (chiedere a Claude: gli basta il link del modulo).

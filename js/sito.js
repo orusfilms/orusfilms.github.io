@@ -44,6 +44,16 @@
       video_nota: 'YouTube · si carica al clic', non_trovato: 'Progetto non trovato.',
       riproduci: 'Riproduci il trailer di', locandina_di: 'Locandina di',
       trailer_arrivo: 'Trailer in arrivo',
+      proponi_testo: 'Compila il modulo con i dati del film e un link per vederlo. Valutiamo ogni proposta e ti ricontattiamo con una prima idea del suo percorso nei festival.',
+      proponi_nota: 'I campi con * sono obbligatori. Se il film è protetto da password, indicala: la useremo solo per la visione.',
+      f_email: 'Email', f_nome: 'Nome e cognome', f_tel: 'Numero di telefono', f_indirizzo: 'Indirizzo',
+      f_progetto: 'Nome del progetto', f_link: 'Link al video', f_password: 'Password (eventuale)', f_commenti: 'Commenti',
+      f_consenso: 'Acconsento all’uso dei miei dati per essere ricontattato da Orus Distribution riguardo a questa proposta.',
+      f_invia: 'Invia la proposta', f_invio: 'Invio in corso…',
+      err_campi: 'Compila tutti i campi obbligatori (*) e controlla email e link.', err_consenso: 'Per inviare la proposta serve il consenso.',
+      err_rete: 'Invio non riuscito. Controlla la connessione e riprova, oppure scrivici a orus.distribution@gmail.com.',
+      grazie_titolo: 'Grazie, abbiamo ricevuto la tua proposta.',
+      grazie_testo: 'La guardiamo con attenzione e ti rispondiamo all’indirizzo email che ci hai lasciato.',
       piede_cookie: 'Questo sito non usa cookie di profilazione. I trailer YouTube si caricano solo se premi play.'
     },
     en: {
@@ -78,6 +88,16 @@
       video_nota: 'YouTube · loads on click', non_trovato: 'Film not found.',
       riproduci: 'Play the trailer of', locandina_di: 'Poster of',
       trailer_arrivo: 'Trailer coming soon',
+      proponi_testo: 'Fill in the form with your film’s details and a screener link. We review every submission and get back to you with a first idea of its festival path.',
+      proponi_nota: 'Fields marked * are required. If the film is password-protected, add the password: we will only use it to watch the film.',
+      f_email: 'Email', f_nome: 'Full name', f_tel: 'Phone number', f_indirizzo: 'Address',
+      f_progetto: 'Project title', f_link: 'Screener link', f_password: 'Password (if any)', f_commenti: 'Comments',
+      f_consenso: 'I agree that Orus Distribution may use my details to contact me about this submission.',
+      f_invia: 'Send submission', f_invio: 'Sending…',
+      err_campi: 'Please fill in all required fields (*) and check the email and link.', err_consenso: 'Your consent is required to send the submission.',
+      err_rete: 'Sending failed. Check your connection and try again, or write to orus.distribution@gmail.com.',
+      grazie_titolo: 'Thank you, we received your submission.',
+      grazie_testo: 'We’ll watch it carefully and reply to the email address you gave us.',
       piede_cookie: 'This site uses no profiling cookies. YouTube trailers load only when you press play.'
     }
   };
@@ -287,10 +307,51 @@
 
   function disegna() { disegnaHome(); disegnaElenco(); disegnaProfilo(); }
 
+  // ---------- Modulo "Proponi il tuo corto" ----------
+  // I dati vanno nel modulo Google delle proposte (stesse domande, stesso foglio risposte,
+  // stessa notifica). Se nel modulo Google si aggiunge o si cambia una domanda, va aggiornato
+  // anche proponi.html (gli identificativi "entry.XXXX").
+  var MODULO_GOOGLE = 'https://docs.google.com/forms/d/e/1FAIpQLSfGQFNwrbSfHFvVYClT97Hg_4LafMhqb1AuNEmvhgbYvV4lTQ/formResponse';
+  function preparaModulo() {
+    var form = document.getElementById('modulo-proposta');
+    if (!form) return;
+    var errore = document.getElementById('modulo-errore');
+    var bottone = document.getElementById('modulo-invia');
+    function mostraErrore(chiave) { errore.textContent = t(chiave); errore.hidden = false; }
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      errore.hidden = true;
+      if (form.elements.sito.value) return; // trappola anti-spam: le persone non la vedono
+      var ok = true;
+      form.querySelectorAll('input[required]:not([type=checkbox]), textarea[required]').forEach(function (el) {
+        var valido = el.value.trim() !== '' && el.checkValidity();
+        el.setAttribute('aria-invalid', valido ? 'false' : 'true');
+        if (!valido) ok = false;
+      });
+      if (!ok) { mostraErrore('err_campi'); form.querySelector('[aria-invalid="true"]').focus(); return; }
+      if (!document.getElementById('f-consenso').checked) { mostraErrore('err_consenso'); return; }
+      var dati = new URLSearchParams();
+      form.querySelectorAll('input[name], textarea[name]').forEach(function (el) {
+        if (el.name !== 'sito' && el.value.trim()) dati.append(el.name, el.value.trim());
+      });
+      bottone.disabled = true; bottone.textContent = t('f_invio');
+      fetch(MODULO_GOOGLE, { method: 'POST', mode: 'no-cors', body: dati })
+        .then(function () {
+          form.hidden = true;
+          var grazie = document.getElementById('modulo-grazie');
+          grazie.hidden = false; grazie.focus();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
+        .catch(function () { mostraErrore('err_rete'); })
+        .then(function () { bottone.disabled = false; bottone.textContent = t('f_invia'); });
+    });
+  }
+
   // ---------- Avvio ----------
   document.addEventListener('DOMContentLoaded', function () {
     preparaMenu();
     applicaLingua();
+    preparaModulo();
     var anno = document.getElementById('anno');
     if (anno) anno.textContent = new Date().getFullYear();
     if (document.getElementById('progetti-home') || document.getElementById('elenco-progetti') || document.getElementById('profilo')) {
