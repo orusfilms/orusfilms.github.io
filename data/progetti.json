@@ -1,0 +1,703 @@
+{
+  "_istruzioni": "Un blocco { ... } per ogni progetto, nell'ordine in cui compaiono sul sito. Per aggiungere il trailer: scrivi in \"trailer\" solo il codice del video YouTube (es. per https://www.youtube.com/watch?v=AbC123xyz scrivi \"AbC123xyz\"). \"inHome\": true = il progetto compare anche nella Home (massimo 4). \"locandina\": percorso dell'immagine dentro la cartella img/locandine; vuoto = riquadro con il titolo. \"presskit\": link pubblico al PDF del press kit (es. link di condivisione Drive); vuoto = pulsante nascosto.",
+  "progetti": [
+    {
+      "id": "hemo",
+      "titolo": "Hemo",
+      "titolo_en": "Hemo",
+      "regia": "Costantino Louis Ruspoli",
+      "anno": 2025,
+      "durata": "15′",
+      "genere": {
+        "it": "Fantascienza",
+        "en": "Science fiction"
+      },
+      "paese": "Italia",
+      "lingua": {
+        "it": "Senza dialoghi",
+        "en": "No dialogue"
+      },
+      "formato": "Colore · 2.00:1",
+      "produzione": "Zattere",
+      "locandina": "img/locandine/hemo.jpg",
+      "trailer": "",
+      "presskit": "",
+      "inHome": true,
+      "sinossi_breve": {
+        "it": "In una città futuristica dominata dalla frenesia, il fattorino Hemo vede la sua routine sconvolta da un misterioso evento. Spinto da una nuova curiosità, intraprende un viaggio mentre un'oscura presenza lo osserva nell'ombra.",
+        "en": "In a futuristic city ruled by relentless haste, the courier Hemo sees his routine disrupted by a mysterious event. Driven by a newfound curiosity, he embarks on a journey while a dark presence watches him from the shadows."
+      },
+      "sinossi": {
+        "it": "Nella frenetica ed eterna notte di una distopica città futuristica, dove chi rallenta viene lasciato indietro, un misterioso gruppo di fattorini lavora senza sosta. Tra loro Hemo, eroe stacanovista, pedala agilmente verso una nuova consegna tra le buie strade della città. Improvvisamente, uno strano evento interrompe bruscamente la sua routine, lasciando il protagonista senza meta e nuovo di una anomala curiosità. Tra le fioche luci e le fredde strutture del suo mondo, Hemo si avventura in una ignota e timida ricerca. Dietro ai panorami in cui si inquadra il protagonista, una sinistra ed oscura presenza si cela nell'ombra.",
+        "en": "In the frantic, endless night of a dystopian futuristic city—where those who slow down are left behind—a mysterious group of couriers works relentlessly. Among them is Hemo, a tireless hero, who pedals swiftly toward a new delivery through the city's dark streets. Suddenly, a strange event abruptly interrupts his routine, leaving the protagonist without direction and filled with an unfamiliar curiosity. Amid dim lights and the cold structures of his world, Hemo ventures into an unknown and tentative search. Behind the landscapes framing the protagonist, a sinister and shadowy presence lurks in the darkness."
+      },
+      "note": {
+        "it": "Un mondo distopico, freddo ed enigmatico, insieme all'assenza di dialoghi, sono strumenti utilizzati per evidenziare la grande metafora che si propone di raccontare questo cortometraggio. Un ambiente ostile che cela nelle ombre pericoli ignoti, ed una società surreale, privata del libero arbitrio, composta da elementi apatici il cui unico scopo ed ossessione è portare a termine la propria missione. Solo un improvviso errore in questo sistema perfetto si rivela in un'inaspettata epifania per il protagonista, il quale privato della propria missione scopre goffamente l'universo che lo circonda, sperimentando incerto la possibilità di scegliere. Il conflitto interiore tra verità ed appartenenza sociale sottolinea la superficialità della realtà fittizia e fa emergere i temi su cui il cortometraggio si propone di far riflettere.",
+        "en": "A dystopian, cold, and enigmatic world, combined with the absence of dialogue, are tools used to highlight the central metaphor this short film aims to convey. A hostile environment hides unknown dangers in the shadows, and a surreal society deprived of free will is composed of apathetic individuals whose sole purpose and obsession is to complete their mission. Only an unexpected flaw in this perfect system reveals itself as a sudden epiphany for the protagonist, who—deprived of his mission—awkwardly discovers the universe around him, hesitantly experiencing the possibility of choice. The inner conflict between truth and social belonging underscores the superficiality of this artificial reality and brings forward the themes the short film seeks to explore."
+      },
+      "bio": {
+        "it": "Nato a Roma nel 2001, passa parte della sua infanzia nelle campagne umbre. Studia al liceo scientifico Cannizzaro e, dopo il diploma, inizia a coltivare le passioni per l'audiovisivo e la fotografia.",
+        "en": "Born in Rome in 2001, he spent part of his childhood in the Umbrian countryside. He studied at the Cannizzaro Scientific High School and, after graduating, began to cultivate his passions for audiovisual media and photography."
+      },
+      "crew": [
+        [
+          "Regia",
+          "Director",
+          "Costantino Louis Ruspoli"
+        ],
+        [
+          "Sceneggiatura",
+          "Screenplay",
+          "Luca Grimaldi, Valerio Pisano, Costantino Louis Ruspoli"
+        ],
+        [
+          "Protagonista",
+          "Lead actor",
+          "Martino Wong"
+        ],
+        [
+          "Con",
+          "With",
+          "Alessandro Biasco, Fabrizio Cavallo"
+        ],
+        [
+          "Fotografia",
+          "Cinematography",
+          "Costantino Louis Ruspoli"
+        ],
+        [
+          "Montaggio",
+          "Editing",
+          "Davide Bissoli, Luca Grimaldi"
+        ],
+        [
+          "Musiche",
+          "Music",
+          "Charlotte Dammico"
+        ],
+        [
+          "Suono",
+          "Sound",
+          "Emanuele Niccolucci"
+        ],
+        [
+          "Produttore",
+          "Producer",
+          "Jacopo Di Luccio"
+        ]
+      ],
+      "festival": [
+        {
+          "nome": "Roma Creative Contest 2025",
+          "it": "Premiere mondiale · In concorso",
+          "en": "World premiere · In competition"
+        },
+        {
+          "nome": "Altavilla Film Fest 2026",
+          "it": "Selezione ufficiale",
+          "en": "Official selection"
+        },
+        {
+          "nome": "Asti International Film Festival 2026",
+          "it": "Quarti di finale",
+          "en": "Quarter-finalist"
+        },
+        {
+          "nome": "Mediterraneo Festival",
+          "it": "Selezione ufficiale",
+          "en": "Official selection"
+        }
+      ]
+    },
+    {
+      "id": "sombrerete",
+      "titolo": "Sombrerete",
+      "titolo_en": "Sombrerete",
+      "regia": "Leonardo Carletti",
+      "anno": 2026,
+      "durata": "20′",
+      "genere": {
+        "it": "Western",
+        "en": "Western"
+      },
+      "paese": "Italia",
+      "lingua": {
+        "it": "Italiano",
+        "en": "Italian"
+      },
+      "formato": "Bianco e nero / colore · 1.66:1",
+      "produzione": "Leonardo Carletti",
+      "locandina": "img/locandine/sombrerete.jpg",
+      "trailer": "",
+      "presskit": "",
+      "inHome": false,
+      "sinossi_breve": {
+        "it": "Nel 1884, in Wyoming, il fuorilegge J.B. e il più anziano “Bruto” condividono una notte attorno al falò, intenti a sorvegliare una cittadina per un colpo.",
+        "en": "In 1884, in Wyoming, the outlaw J.B. and the older man known as “Bruto” spend a night around a campfire, keeping watch over a small town as they prepare for a heist."
+      },
+      "sinossi": {
+        "it": "Nel 1884, in Wyoming, il fuorilegge J.B. e il più anziano “Bruto” condividono una notte attorno al falò, intenti a sorvegliare una cittadina per un colpo. Dapprima taciturno, il Bruto si apre con l'alcool e racconta il suo passato da vagabondo. Emergono dettagli inquietanti su un vecchio omicidio in Messico.",
+        "en": "In 1884, in Wyoming, the outlaw J.B. and the older man known as “Bruto” spend a night around a campfire, keeping watch over a small town as they prepare for a heist. Initially taciturn, Bruto opens up with the help of alcohol and recounts his past as a drifter. Disturbing details about an old murder in Mexico begin to emerge."
+      },
+      "note": {
+        "it": "Il cortometraggio si propone come una rilettura contemporanea del western all'italiana, con l'intento di rinnovarne il linguaggio senza tradirne gli stilemi fondamentali. Attraverso una sottile vena di nichilismo, affronta temi come la perdita, la rimozione e il perdono, inteso soprattutto come un percorso interiore rivolto a sé stessi più che verso chi ha causato le proprie sofferenze.",
+        "en": "The short film aims to be a contemporary reinterpretation of the Italian Western, with the intention of renewing its language without betraying its fundamental stylistic elements. Through a subtle vein of nihilism, it explores themes such as loss, repression, and forgiveness, understood primarily as an inner journey directed toward oneself rather than toward those who have caused one's suffering."
+      },
+      "bio": {
+        "it": "Nato nel 2000 a Piombino (LI), si appassiona alla fotografia in età adolescenziale, principalmente paesaggistica. Dopo studi in psicologia all'Università di Firenze, si approccia al cinema frequentando la Rome University of Fine Arts (RUFA). Da qualche anno lavora assiduamente sui set in reparto regia e fotografia.",
+        "en": "Born in 2000 in Piombino (Livorno), he developed a passion for photography during adolescence, mainly landscape photography. After studying psychology at the University of Florence, he approached cinema by attending the Rome University of Fine Arts (RUFA). In recent years, he has been working consistently on film sets in the directing and cinematography departments."
+      },
+      "crew": [
+        [
+          "Scritto e diretto da",
+          "Written and directed by",
+          "Leonardo Carletti"
+        ]
+      ],
+      "festival": [
+        {
+          "nome": "Roma Film Corto 2026",
+          "it": "Selezione ufficiale",
+          "en": "Official selection"
+        },
+        {
+          "nome": "Asti International Film Festival 2026",
+          "it": "Quarti di finale",
+          "en": "Quarter-finalist"
+        },
+        {
+          "nome": "Moviboli",
+          "it": "Fuori concorso",
+          "en": "Out of competition"
+        }
+      ]
+    },
+    {
+      "id": "raffaele-felice",
+      "titolo": "Bisogna immaginare Raffaele felice",
+      "titolo_en": "One Must Imagine Raffaele Happy",
+      "regia": "Andrea Starvaggi",
+      "anno": 2025,
+      "durata": "13′",
+      "genere": {
+        "it": "Finzione",
+        "en": "Fiction"
+      },
+      "paese": "Italia",
+      "lingua": {
+        "it": "Italiano",
+        "en": "Italian"
+      },
+      "formato": "Colore · 2.39:1",
+      "produzione": "Agglomerati (Sandro Barricelli)",
+      "locandina": "img/locandine/raffaele-felice.jpg",
+      "trailer": "",
+      "presskit": "",
+      "inHome": false,
+      "sinossi_breve": {
+        "it": "Un professore di filosofia prova a cercare un nuovo senso per la sua vita dopo la pensione.",
+        "en": "A philosophy professor tries to find a new meaning for his life after retirement."
+      },
+      "sinossi": {
+        "it": "Un professore di filosofia prova a cercare un nuovo senso per la sua vita dopo la pensione. Tra vecchi allievi e nuove leve, tra filosofia assurda e fumetti giapponesi, Raffaele scoprirà che il senso della vita, per quanto insensata, è continuare ad andare avanti.",
+        "en": "A philosophy professor tries to find a new meaning for his life after retirement. Between former students and a new generation, between absurd philosophy and Japanese comics, Raffaele will discover that the meaning of life, however senseless it may seem, is to keep moving forward."
+      },
+      "note": {
+        "it": "Questo corto nasce da un aperitivo con un professore del liceo, anni dopo il diploma. Raffaele era appena andato in pensione e mi aveva detto “mi capita di svegliarmi la mattina e prepararmi per andare a lezione, salvo poi realizzare che non devo andare da nessuna parte”. Da lì l'idea, il “come ti è venuto in mente” del prof, l'accettare di interpretare se stesso e di mettersi per la prima volta davanti a una macchina da presa. Una regia semplice per raccontare un uomo che cerca se stesso e lo trova nell'incontro quasi magico con una ragazzina in un parco.",
+        "en": ""
+      },
+      "bio": {
+        "it": "Nasce a Roma nel 1997; al liceo inizia a dirigere cortometraggi con gli amici e nel 2020 decide di provare a trasformarlo in una professione. Si diploma all'Accademia di Cinema e Televisione Griffith e inizia a lavorare come operatore Steadicam mentre continua a portare avanti i suoi progetti.",
+        "en": ""
+      },
+      "crew": [
+        [
+          "Regia",
+          "Director",
+          "Andrea Starvaggi"
+        ],
+        [
+          "Sceneggiatura",
+          "Screenplay",
+          "Andrea Starvaggi, Filippo Giovannelli, Fabrizio Cappiello"
+        ],
+        [
+          "Cast",
+          "Cast",
+          "Raffaele Villani, Ludovico Tersigni, Giulia Tufano"
+        ],
+        [
+          "Fotografia",
+          "Cinematography",
+          "Tobia Gaspari"
+        ],
+        [
+          "Montaggio",
+          "Editing",
+          "Filippo Giovannelli"
+        ],
+        [
+          "Suono",
+          "Sound",
+          "Giacomo Gaspari"
+        ],
+        [
+          "Musiche",
+          "Music",
+          "Daniele Piredda"
+        ],
+        [
+          "Produzione",
+          "Producer",
+          "Sandro Barricelli"
+        ]
+      ],
+      "festival": [
+        {
+          "nome": "Cannes Indie Short Awards",
+          "it": "Semifinalista",
+          "en": "Semi-finalist"
+        },
+        {
+          "nome": "Videocorto Nettuno 2026",
+          "it": "Selezione ufficiale",
+          "en": "Official selection"
+        },
+        {
+          "nome": "Santa Marinella Short Film Festival 2026",
+          "it": "Selezione ufficiale",
+          "en": "Official selection"
+        },
+        {
+          "nome": "Altavilla Film Fest 2026",
+          "it": "Selezione ufficiale",
+          "en": "Official selection"
+        }
+      ]
+    },
+    {
+      "id": "ultima-notte-d-estate",
+      "titolo": "L'ultima notte d'estate",
+      "titolo_en": "The Last Night of Summer",
+      "regia": "Davide Russo",
+      "anno": 2025,
+      "durata": "17′",
+      "genere": {
+        "it": "Finzione",
+        "en": "Fiction"
+      },
+      "paese": "Italia",
+      "lingua": {
+        "it": "Italiano",
+        "en": "Italian"
+      },
+      "formato": "Colore · 1.85:1",
+      "produzione": "Andrea Viganò",
+      "locandina": "img/locandine/ultima-notte-d-estate.jpg",
+      "trailer": "",
+      "presskit": "",
+      "inHome": true,
+      "sinossi_breve": {
+        "it": "La fine dell'estate è ormai vicina quando Bruno convince Teo, l'amico di sempre, a trascorrere un'ultima notte insieme tra le strade deserte e i parchetti della provincia milanese.",
+        "en": "As summer draws to a close, Bruno convinces Teo, his lifelong friend, to spend one last night together wandering through the empty streets and small parks of the Milan suburbs."
+      },
+      "sinossi": {
+        "it": "La fine dell'estate è ormai vicina quando Bruno convince Teo, l'amico di sempre, a trascorrere un'ultima notte insieme tra le strade deserte e i parchetti della provincia milanese. Birre, sigarette e chiacchiere interminabili accompagnano le ore davanti alle luci dell'aeroporto, mentre Bruno cerca il coraggio di confessargli un segreto prima che sorga il sole e abbia inizio una nuova stagione.",
+        "en": "As summer draws to a close, Bruno convinces Teo, his lifelong friend, to spend one last night together wandering through the empty streets and small parks of the Milan suburbs. Beers, cigarettes, and endless conversations fill the hours under the glow of the airport lights, as Bruno searches for the courage to confess a secret before sunrise ushers in a new season."
+      },
+      "note": {
+        "it": "Il cortometraggio è scandito da inquadrature semplici e per lo più statiche, volte a cristallizzare una naturalezza e una spontaneità, ricercate anche in fase di preparazione con gli attori. I dialoghi sono tracciati spesso da una ricerca sui personaggi che lascia spazio all'improvvisazione, favorendo un'immersione diretta nelle dinamiche relazionali di un gruppo di amici ventenni. Solo quando il calderone dei ricordi esplode in tutta la sua nostalgia, il linguaggio muta a favore di una diegesi narrativa in cui i protagonisti imbracciano in prima persona una piccola videocamera digitale per raccontarsi in un eterno presente.",
+        "en": "The short film is shaped by simple, mostly static shots, aimed at capturing a sense of naturalness and spontaneity, qualities also pursued during preparation with the actors. The dialogue often stems from character-driven exploration that leaves room for improvisation, encouraging a direct immersion into the relational dynamics of a group of friends in their twenties. Only when the cauldron of memories bursts with nostalgia does the language shift, giving way to a narrative diegesis in which the protagonists themselves take up a small digital video camera to portray their lives in an eternal present."
+      },
+      "bio": {
+        "it": "Davide Russo è nato a Magenta e cresciuto tra le campagne lombarde. Si è laureato a Milano in Scienze Umanistiche per la Comunicazione e oggi studia regia presso il Centro Sperimentale di Cinematografia di Roma.",
+        "en": "Davide Russo was born in Magenta and grew up in the Lombard countryside. He graduated in Milan with a degree in Humanities for Communication and is currently studying directing at the Centro Sperimentale di Cinematografia in Rome."
+      },
+      "crew": [
+        [
+          "Scritto e diretto da",
+          "Written and directed by",
+          "Davide Russo"
+        ],
+        [
+          "Con",
+          "With",
+          "Fabio Biffi, Leonardo Cozzi, Manuel Coratella, Stefano Mukuri, Nicholas Bandi"
+        ],
+        [
+          "Fotografia",
+          "Cinematography",
+          "Thomas Noonan"
+        ],
+        [
+          "Montaggio",
+          "Editing",
+          "Davide Russo"
+        ],
+        [
+          "Musiche",
+          "Music",
+          "Gregory Sobrio, Samo"
+        ],
+        [
+          "Scenografia",
+          "Production design",
+          "Marta Lovati"
+        ],
+        [
+          "Organizzazione",
+          "Production",
+          "Andrea Viganò, Matteo Carito"
+        ]
+      ],
+      "festival": [
+        {
+          "nome": "Altavilla Film Fest 2026",
+          "it": "Selezione ufficiale",
+          "en": "Official selection"
+        },
+        {
+          "nome": "Asti International Film Festival 2026",
+          "it": "Quarti di finale",
+          "en": "Quarter-finalist"
+        }
+      ]
+    },
+    {
+      "id": "roxy-kama",
+      "titolo": "Roxy Kama",
+      "titolo_en": "Roxy Kama",
+      "regia": "Antonio Porcaro",
+      "anno": 2026,
+      "durata": "30′",
+      "genere": {
+        "it": "Thriller",
+        "en": "Thriller"
+      },
+      "paese": "Italia",
+      "lingua": {
+        "it": "Italiano",
+        "en": "Italian"
+      },
+      "formato": "Colore · 2.35:1",
+      "produzione": "Wide (Antonio Porcaro, Armando Taddeo)",
+      "locandina": "",
+      "trailer": "",
+      "presskit": "",
+      "inHome": false,
+      "sinossi_breve": {
+        "it": "Roxy è una popstar creata a tavolino. Quando un serial killer inizia a uccidere giovani ragazze truccandole come lei, la sua immagine diventa un'esca di morte.",
+        "en": "Roxy is a manufactured pop star. When a serial killer begins murdering young girls and making them up to look like her, her image becomes a deadly lure."
+      },
+      "sinossi": {
+        "it": "Roxy è una popstar italiana costruita a tavolino: look impeccabile, musica perfettamente studiata, un personaggio creato per piacere, non per esprimersi. Quando un serial killer comincia a uccidere giovani ragazze travestendole come lei, la sua immagine diventa un'arma. Per sicurezza, viene nascosta in un paesino sperduto, dove dovrebbe scrivere il suo nuovo album. Ma Roxy non vuole protezione: vuole attirare il killer, incontrarlo e porre fine alle sue atrocità.",
+        "en": "Roxy is a manufactured Italian pop star: an impeccable look, meticulously crafted music, and a persona created to please rather than to express herself. When a serial killer begins murdering young women and dressing them up to look like her, her image becomes a weapon. For her safety, she is hidden away in a remote village, where she is supposed to write her new album. But Roxy doesn't want protection; she wants to lure the killer out, confront him, and put an end to his atrocities."
+      },
+      "note": {
+        "it": "",
+        "en": ""
+      },
+      "bio": {
+        "it": "Antonio Porcaro si forma all'Accademia d'arte drammatica del Teatro Bellini di Napoli. Dopo un periodo come assistente alla regia e regista in teatro, dal 2013 lavora nel reparto regia di progetti cinematografici, come aiuto regista per Giuseppe M. Gaudino, Edgardo Pistone, Francesco Prisco e altri. Ha diretto sette cortometraggi, l'ultimo dei quali è Roxy Kama, e sta preparando il suo primo lungometraggio, “Il cielo deserto”.",
+        "en": "Antonio Porcaro trained at the Academy of Dramatic Art of the Bellini Theatre in Naples. After working in theatre as an assistant director and director, since 2013 he has worked in the directing department of film projects, as assistant director for Giuseppe M. Gaudino, Edgardo Pistone, Francesco Prisco and others. He has directed seven short films, the most recent being Roxy Kama, and is preparing his debut feature, “Il cielo deserto”."
+      },
+      "crew": [
+        [
+          "Regia",
+          "Director",
+          "Antonio Porcaro"
+        ],
+        [
+          "Produzione",
+          "Producers",
+          "Antonio Porcaro, Armando Taddeo"
+        ]
+      ],
+      "festival": [
+        {
+          "nome": "Theta Short Film Festival 2026",
+          "it": "Finalista",
+          "en": "Finalist"
+        }
+      ]
+    },
+    {
+      "id": "tommaso",
+      "titolo": "Tommaso",
+      "titolo_en": "Tommaso",
+      "regia": "Vittorio Marchetti",
+      "anno": 2026,
+      "durata": "20′",
+      "genere": {
+        "it": "Finzione",
+        "en": "Fiction"
+      },
+      "paese": "Italia",
+      "lingua": {
+        "it": "Italiano",
+        "en": "Italian"
+      },
+      "formato": "Colore · 2.39:1",
+      "produzione": "InFabula Produzioni",
+      "locandina": "img/locandine/tommaso.jpg",
+      "trailer": "",
+      "presskit": "",
+      "inHome": true,
+      "sinossi_breve": {
+        "it": "Nel caldo di un'estate italiana del 1992, un ragazzo introverso viene lasciato con i nonni che non ha mai conosciuto, dando vita a un difficile confronto con un nonno austero che nasconde vecchi rancori familiari.",
+        "en": "Set in the heat of an Italian summer in 1992, an introverted boy is left with the grandparents he has never met, sparking a difficult confrontation with an austere grandfather who hides long-standing family grudges."
+      },
+      "sinossi": {
+        "it": "Nell'estate del 1992, il piccolo Tommaso viene lasciato dalla madre nella casa di campagna dei nonni materni, che non ha mai conosciuto. Tra silenzi, tensioni e il rifiuto del nonno, il bambino cerca disperatamente un legame familiare. Col tempo, un gesto spontaneo riesce ad abbattere le barriere e a riavvicinare i due. Quando finalmente nasce un affetto sincero, un evento tragico sconvolge l'equilibrio appena ritrovato.",
+        "en": "In the summer of 1992, young Tommaso is left by his mother at the countryside home of his maternal grandparents, whom he has never met before. Surrounded by silence, tension, and his grandfather's rejection, the boy desperately searches for a sense of family connection. Over time, a simple spontaneous gesture begins to break down the barriers between them. Just as a genuine bond finally starts to grow, a tragic event shatters their newly found balance."
+      },
+      "note": {
+        "it": "“Tommaso” esplora il tema dei silenzi familiari e dei rancori tramandati tra generazioni. Il corto riflette sul dolore ereditato e sulla possibilità di trasformarlo, fino a un finale tragico che rompe anni di non detti. Visivamente, il film contrappone la luce calda del giorno a quella fredda e inquietante della notte, usando natura e simboli folkloristici come metafore delle radici familiari. Le inquadrature statiche e ampie immergono lo spettatore nello spazio e nella tensione emotiva, rendendolo testimone impotente degli eventi.",
+        "en": "“Tommaso” explores unspoken tensions within family relationships and the resentment passed down through generations. The short film reflects on inherited pain and the chance to transform it, leading to a tragic ending that finally breaks years of silence. Visually, the film contrasts the warm light of daytime with the cold, unsettling atmosphere of night, using nature and folkloric symbols as metaphors for family roots. The mostly static and wide shots immerse the audience in the space and emotional tension, making them powerless witnesses to the unfolding events."
+      },
+      "bio": {
+        "it": "Vittorio Marchetti, regista molisano classe 1998, si è diplomato nel 2022 all'Accademia Nazionale del Cinema di Bologna e, subito dopo gli studi, ha avviato un percorso professionale nel cinema lavorando a numerosi progetti come sceneggiatore e regista indipendente.",
+        "en": "Vittorio Marchetti, a filmmaker from Molise born in 1998, graduated in 2022 from the Accademia Nazionale del Cinema di Bologna and immediately began a professional career in cinema, working on numerous projects as an independent screenwriter and director."
+      },
+      "crew": [
+        [
+          "Regia e sceneggiatura",
+          "Written and directed by",
+          "Vittorio Marchetti"
+        ],
+        [
+          "Con",
+          "With",
+          "Paolo Ricchi, Anna Rita Del Piano, Giovanni Discenza, Valentina Mancinelli"
+        ],
+        [
+          "Fotografia",
+          "Cinematography",
+          "Alessio Santelli"
+        ],
+        [
+          "Montaggio",
+          "Editing",
+          "Natalia Canale"
+        ],
+        [
+          "Musiche",
+          "Music",
+          "Luca Picciano"
+        ],
+        [
+          "Scenografia",
+          "Production design",
+          "Michelangelo Tomaro"
+        ],
+        [
+          "Produzione",
+          "Production",
+          "InFabula Produzioni · co-prodotto da Alessandro Prece"
+        ]
+      ],
+      "festival": []
+    },
+    {
+      "id": "belladonna",
+      "titolo": "Belladonna",
+      "titolo_en": "Belladonna",
+      "regia": "Veronica Lucchetta",
+      "anno": 2026,
+      "durata": "16′",
+      "genere": {
+        "it": "Finzione",
+        "en": "Fiction"
+      },
+      "paese": "Italia",
+      "lingua": {
+        "it": "Italiano",
+        "en": "Italian"
+      },
+      "formato": "Colore · 2.00:1",
+      "produzione": "Veronica Lucchetta",
+      "locandina": "",
+      "trailer": "",
+      "presskit": "",
+      "inHome": false,
+      "sinossi_breve": {
+        "it": "Dopo anni di lontananza, il ventenne Andrea si ricongiunge con la madre, seguendola in un vortice di feste e incontri notturni, e riprendendo ogni istante con la sua handycam.",
+        "en": "After years apart, twenty-year-old Andrea reconnects with his mother, following her into a whirlwind of parties and late-night encounters, and filming every moment with his handycam."
+      },
+      "sinossi": {
+        "it": "Dopo anni di lontananza, il ventenne Andrea si ricongiunge con la madre, seguendola in un vortice di feste e incontri notturni. Il ragazzo riprende compulsivamente ogni istante con la sua handycam, documentando la loro quotidianità. L'esigenza di dover collezionare qualsiasi tipo di ricordo metterà il ragazzo davanti a una scelta: continuare a vivere all'interno di una realtà finta e idealizzata oppure accettare una cruda verità.",
+        "en": "After years apart, twenty-year-old Andrea reconnects with his mother, following her into a whirlwind of parties and late-night encounters. The young man compulsively records every moment with his handycam, documenting their everyday life. The need to collect any kind of memory will bring him face-to-face with a choice: to continue living within a fake and idealized reality, or to accept a harsh truth."
+      },
+      "note": {
+        "it": "Andrea non vive realmente il rapporto con la madre, ma lo “documenta”. La sua handycam è uno scudo che gli permette di guardare la realtà a debita distanza, trasformando una donna instabile ed egoista nella protagonista affascinante di una narrazione ricostruita da lui. La belladonna è una pianta il cui nome deriva dall'uso cosmetico rinascimentale di dilatare le pupille per apparire più belle: nonostante il suo bell'aspetto, è una pianta estremamente velenosa.",
+        "en": ""
+      },
+      "bio": {
+        "it": "Nata a Roma, Veronica Lucchetta è regista e scrittrice e frequenta l'ultimo anno del corso accademico di Cinema alla Rome University of Fine Arts (RUFA). Il suo approccio artistico si distingue per la capacità di integrare il disegno e l'arte figurativa nell'audiovisivo. Ha realizzato i cortometraggi “Sintesi” (2022), di cui ha curato anche il montaggio, e “Belladonna” (2026).",
+        "en": ""
+      },
+      "crew": [
+        [
+          "Regia e sceneggiatura",
+          "Written and directed by",
+          "Veronica Lucchetta"
+        ],
+        [
+          "Cast",
+          "Cast",
+          "Tommy Imperatori, Cristina Bevilacqua, Roxy Colace, Modestino Capaccio"
+        ],
+        [
+          "Fotografia",
+          "Cinematography",
+          "Marianna Bregni"
+        ],
+        [
+          "Montaggio",
+          "Editing",
+          "Francesco Rosamilia"
+        ],
+        [
+          "Suono",
+          "Sound",
+          "Eleonora Magliolino"
+        ],
+        [
+          "Musiche",
+          "Music",
+          "Ettore Brancé"
+        ]
+      ],
+      "festival": []
+    },
+    {
+      "id": "prima-di-scendere",
+      "titolo": "Prima di scendere",
+      "titolo_en": "Before Coming Down",
+      "regia": "Sergio Di Censo",
+      "anno": 2026,
+      "durata": "13′",
+      "genere": {
+        "it": "Finzione",
+        "en": "Fiction"
+      },
+      "paese": "Italia",
+      "lingua": {
+        "it": "Italiano",
+        "en": "Italian"
+      },
+      "formato": "Colore · 1.66:1",
+      "produzione": "Reflux Media",
+      "locandina": "",
+      "trailer": "",
+      "presskit": "",
+      "inHome": false,
+      "sinossi_breve": {
+        "it": "Sopra un terrazzo romano, mentre la città scorre rumorosa, Emma e Luca si confrontano sul futuro.",
+        "en": "On a Roman rooftop, as the city rushes noisily below, Emma and Luca talk about the future."
+      },
+      "sinossi": {
+        "it": "Sopra un terrazzo romano, mentre la città scorre rumorosa, Emma e Luca si confrontano sul futuro. Tra incertezze abitative, familiari ed emotive, i due mettono a nudo le fragilità di una generazione.",
+        "en": "On a Roman rooftop, as the city rushes noisily below, Emma and Luca talk about the future. Amid housing, family, and emotional uncertainties, the two lay bare the fragilities of a generation."
+      },
+      "note": {
+        "it": "Se c'è un sentimento diffuso in questa generazione, è l'incertezza: su dove abitare, sul lavoro, su quale sia il proprio posto nel mondo. Oggi più che mai siamo tutti dei fuorisede, con le radici in un luogo, il cervello proteso in una direzione e il cuore in un'altra. Prima di scendere vuole raccontare quest'epoca di incertezza e quel momento in cui, prima di tornare a casa, ti si stringe lo stomaco: guardare la situazione dall'alto, prima di di-scendere di nuovo nel caos.",
+        "en": "If there is one widespread feeling in this generation, it is uncertainty: about where to live, about work, about one's place in the world. Today more than ever we are all living away from home, with our roots in one place, our minds reaching in one direction and our hearts in another. Prima di scendere tells the story of this age of uncertainty and of that moment when, just before returning home, your stomach tightens: looking at the situation from above, before descending once again into the chaos."
+      },
+      "bio": {
+        "it": "Filmmaker abruzzese vissuto in Veneto e trapiantato a Roma. Dopo il diploma in Regia e Sceneggiatura, intraprende il suo percorso sui set cinematografici e negli ambienti culturali della capitale. Lo interessa indagare la memoria, le radici emotive e l'intimità personale e collettiva, spesso attraverso il contesto ambientale e umano.",
+        "en": "Filmmaker from Abruzzo who grew up in Veneto and is now based in Rome. After a diploma in Directing and Screenwriting, he began working on film sets and within the cultural circles of the capital. He is interested in exploring memory, emotional roots and personal and collective intimacy, often through environmental and human context."
+      },
+      "crew": [
+        [
+          "Regia",
+          "Director",
+          "Sergio Di Censo"
+        ],
+        [
+          "Cast",
+          "Cast",
+          "Sara Younes, Leonardo Cesaroni"
+        ],
+        [
+          "Montaggio",
+          "Editing",
+          "Jacopo Balliana"
+        ],
+        [
+          "Produzione",
+          "Production",
+          "Reflux Media"
+        ]
+      ],
+      "festival": []
+    },
+    {
+      "id": "limoni",
+      "titolo": "Limoni",
+      "titolo_en": "Lemons",
+      "regia": "Daniel Angelo Fornaro",
+      "anno": 2026,
+      "durata": "10′",
+      "genere": {
+        "it": "Finzione",
+        "en": "Fiction"
+      },
+      "paese": "Italia",
+      "lingua": {
+        "it": "Italiano",
+        "en": "Italian"
+      },
+      "formato": "Colore · 4:3",
+      "produzione": "Daniel Angelo Fornaro",
+      "locandina": "img/locandine/limoni.jpg",
+      "trailer": "",
+      "presskit": "",
+      "inHome": true,
+      "sinossi_breve": {
+        "it": "Raggiunti gli amici in piazza, Fabrizio scorge Arianna baciarsi con un ragazzo, poco distante da lui. In un sussulto, il ricordo degli ultimi giorni passati insieme lo attraversa.",
+        "en": ""
+      },
+      "sinossi": {
+        "it": "Raggiunti gli amici in piazza, Fabrizio scorge Arianna baciarsi con un ragazzo, poco distante da lui. In un sussulto, il ricordo degli ultimi giorni passati insieme lo attraversa. Quando anche Arianna lo nota tra la folla, i loro sguardi si incrociano e il mondo si ferma per un istante.",
+        "en": ""
+      },
+      "note": {
+        "it": "",
+        "en": ""
+      },
+      "bio": {
+        "it": "Classe 2002, esordisce come attore protagonista in PHANTOM, presentato alla SIC dell'81ª Mostra del Cinema di Venezia, e nel 2025 vince come miglior attore al Cortinametraggio e all'Incanto Film Festival. Recita poi in SINATRITUDE di Sofia Arciero e Riccardo Stopponi e in LE OMBRE DELL'ANIMA di Paolo Licata. Dopo un corso di regia e sceneggiatura di LuceLab Cinecittà, nel 2026 gira il suo primo cortometraggio, LIMONI.",
+        "en": ""
+      },
+      "crew": [
+        [
+          "Scritto e diretto da",
+          "Written and directed by",
+          "Daniel Angelo Fornaro"
+        ],
+        [
+          "Con",
+          "With",
+          "Emma Beonio Brocchieri, Daniele Sanduzzi"
+        ],
+        [
+          "Fotografia",
+          "Cinematography",
+          "Marianna Bregni"
+        ],
+        [
+          "Musiche e montaggio",
+          "Music and editing",
+          "Alessandro Monteriso"
+        ],
+        [
+          "Produzione",
+          "Production",
+          "Miriam Kdaiem, Beatrice Rodegari, Francesca Savoretti"
+        ]
+      ],
+      "festival": []
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+SITO ORUS DISTRIBUTION – come è fatto
+
+Pagine
+- index.html ......... Home
+- progetti.html ...... Progetti in distribuzione (griglia con filtri)
+- progetto.html ...... Profilo di un progetto (si apre come progetto.html?id=hemo)
+- 404.html ........... Pagina "non trovata"
+
+Cartelle
+- data/progetti.json . TUTTI i dati dei progetti (titoli, sinossi, crew, festival, trailer). Si modifica solo questo per aggiornare il sito.
+- img/locandine ...... Locandine (jpg larghe circa 640 px, nome = id del progetto)
+- img ................ Loghi, icona, immagine di anteprima per i social
+- css/stile.css ...... Grafica (colori e font in cima, nel blocco :root)
+- js/sito.js ......... Funzionamento (lingua IT/EN, griglie, profili, trailer). In cima ci sono i testi fissi in italiano e inglese.
+
+Aggiornamenti più comuni (da GitHub, con la matita "Edit")
+- Trailer: in data/progetti.json, campo "trailer" del progetto = solo il codice YouTube.
+  Esempio: https://www.youtube.com/watch?v=AbC123xyz  ->  "trailer": "AbC123xyz"
+- Nuova selezione: nel campo "festival" del progetto aggiungere una riga
+  { "nome": "Nome Festival 2027", "it": "Selezione ufficiale", "en": "Official selection" },
+- Locandina: caricare il jpg in img/locandine e scrivere il percorso in "locandina", es. "img/locandine/belladonna.jpg"
+- Press kit: link pubblico al PDF in "presskit" (vuoto = pulsante nascosto)
+- Home: "inHome": true sui (massimo) 4 progetti da mostrare in Home
+
+Attenzione alle virgole nel file .json: ogni blocco e ogni riga di un elenco è separato da una virgola, tranne l'ultimo.
+Se dopo una modifica i progetti spariscono dal sito, quasi sempre è una virgola o una virgoletta mancante.
+
+Il sito va visto online (o con un piccolo server): aprendo index.html con un doppio clic dal computer
+i progetti non si caricano, perché il browser blocca la lettura di data/progetti.json dai file locali.
